@@ -15,10 +15,10 @@
 
         default_layer {
             bindings = <
-&kp SEMICOLON   &kp COMMA       &kp PERIOD          &kp P             &kp Y        &kp F        &kp G              &kp C                &kp R            &kp L
-&mt LEFT_WIN A  &mt LEFT_ALT O  &mt LEFT_CONTROL E  &mt LEFT_SHIFT U  &kp I        &kp D        &mt RIGHT_SHIFT H  &mt RIGHT_CONTROL T  &mt RIGHT_ALT N  &mt RIGHT_GUI S
-&kp SQT         &kp Q           &kp J               &kp K             &kp X        &kp B        &kp M              &kp W                &kp V            &kp Z
-                                &kp ESC             &lt 1 SPACE       &lt 2 TAB    &lt 2 ENTER  &lt 1 BACKSPACE    &to 3
+&kp SEMICOLON   &kp COMMA       &kp PERIOD          &kp P             &kp Y        &kp F        &kp G             &kp C               &kp R           &kp L
+&mt LEFT_WIN A  &mt LEFT_ALT O  &mt LEFT_CONTROL E  &mt LEFT_SHIFT U  &kp I        &kp D        &mt LEFT_SHIFT H  &mt LEFT_CONTROL T  &mt LEFT_ALT N  &mt LEFT_GUI S
+&kp SQT         &kp Q           &kp J               &kp K             &kp X        &kp B        &kp M             &kp W               &kp V           &kp Z
+                                &kp ESC             &lt 1 SPACE       &lt 2 TAB    &lt 2 ENTER  &lt 1 BACKSPACE   &to 3
             >;
         };
 
@@ -64,6 +64,15 @@
 &kp A  &kp S  &kp D    &kp F      &kp G      &kp H    &kp J     &kp K    &kp L      &kp SEMI
 &kp Z  &kp X  &kp C    &kp V      &kp B      &kp N    &kp M     &kp DOT  &kp COMMA  &kp FSLH
               &kp ESC  &kp SPACE  &kp TAB    &kp RET  &kp BSPC  &to 0
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
