@@ -7,6 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+&mt { flavor = "balanced"; };
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -40,10 +42,10 @@
 
         layer_3 {
             bindings = <
-&none  &none     &kp UP    &none      &none    &none  &none  &none  &none  &none
-&none  &kp LEFT  &kp DOWN  &kp RIGHT  &none    &none  &none  &none  &none  &none
-&none  &none     &none     &none      &none    &none  &none  &none  &none  &none
-                 &to 0     &none      &none    &mo 4  &none  &to 5
+&to 5  &none                    &kp UP                &none                 &none    &none  &mkp MCLK  &none  &mkp RCLK  &none
+&none  &mt LEFT_ALT LEFT_ARROW  &mt LCTRL DOWN_ARROW  &mt LEFT_SHIFT RIGHT  &none    &none  &none      &none  &none      &none
+&none  &none                    &none                 &none                 &none    &none  &none      &none  &none      &none
+                                &to 0                 &none                 &none    &mo 4  &mkp LCLK  &to 0
             >;
         };
 
