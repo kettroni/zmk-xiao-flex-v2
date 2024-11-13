@@ -6,6 +6,7 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 &mt { flavor = "balanced"; };
 
@@ -42,10 +43,10 @@
 
         layer_3 {
             bindings = <
-&to 5  &none                    &kp UP                &none                 &none    &none  &none  &none  &none  &none
-&none  &mt LEFT_ALT LEFT_ARROW  &mt LCTRL DOWN_ARROW  &mt LEFT_SHIFT RIGHT  &none    &none  &none  &none  &none  &none
+&to 5  &none                    &kp UP                &none                 &none    &none  &none  &mmv MOVE_UP  &mkp RCLK  &none
+&none  &mt LEFT_ALT LEFT_ARROW  &mt LCTRL DOWN_ARROW  &mt LEFT_SHIFT RIGHT  &none    &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
 &none  &none                    &none                 &none                 &none    &none  &none  &none  &none  &none
-                                &to 0                 &none                 &none    &mo 4  &none  &to 0
+                                &to 0                 &none                 &none    &mo 4  &mkp LCLK  &to 0
             >;
         };
 
