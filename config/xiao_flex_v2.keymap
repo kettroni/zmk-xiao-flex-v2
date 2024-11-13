@@ -7,6 +7,11 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
+
+#include <dt-bindings/zmk/pointing.h>
+
 &mt { flavor = "balanced"; };
 
 / {
@@ -42,10 +47,10 @@
 
         layer_3 {
             bindings = <
-&to 5  &none                    &kp UP                &none                 &none    &none  &none  &none  &none  &none
-&none  &mt LEFT_ALT LEFT_ARROW  &mt LCTRL DOWN_ARROW  &mt LEFT_SHIFT RIGHT  &none    &none  &none  &none  &none  &none
+&to 5  &none                    &kp UP                &none                 &none    &none  &mkp MCLK  &mmv MOVE_UP  &mkp RCLK  &none
+&none  &mt LEFT_ALT LEFT_ARROW  &mt LCTRL DOWN_ARROW  &mt LEFT_SHIFT RIGHT  &none    &none  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
 &none  &none                    &none                 &none                 &none    &none  &none  &none  &none  &none
-                                &to 0                 &none                 &none    &mo 4  &none  &to 0
+                                &to 0                 &none                 &none    &mo 4  &mkp LCLK  &to 0
             >;
         };
 
